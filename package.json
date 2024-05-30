@@ -55,8 +55,8 @@
           "credentials" : {
             "url": "https://qpe.itesys.ch/sap/opu/odata/sap/API_PRODUCT_SRV/",
             "authentication": "BasicAuthentication",
-            "username": "2607",
-            "password": "Herbst.22",
+            "username": "user",
+            "password": "password",
             "queries": {
               "sap-client": "500"
             }
