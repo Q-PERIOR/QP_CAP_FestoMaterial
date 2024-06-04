@@ -51,12 +51,10 @@
       "srv_ext": {
         "kind": "odata-v2",
         "model": "srv/external/srv_ext",
-        "[hybrid]" : {
-          "credentials" : {
+        "[hybrid]": {
+          "credentials": {
             "url": "https://qpe.itesys.ch/sap/opu/odata/sap/API_PRODUCT_SRV/",
             "authentication": "BasicAuthentication",
-            "username": "user",
-            "password": "password",
             "queries": {
               "sap-client": "500"
             }
