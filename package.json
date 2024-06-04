@@ -13,10 +13,12 @@
     "express": "^4"
   },
   "devDependencies": {
+    "@sap/ux-specification": "^1.120.11",
     "sqlite3": "^5.0.4"
   },
   "scripts": {
-    "start": "cds run"
+    "start": "cds run",
+    "watch-qp-ui5-material": "cds watch --open qp-ui5-material/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "engines": {
     "node": "^16.15"
@@ -60,7 +62,29 @@
             }
           }
         }
+      },
+      "UI_SOURCINGPROJECT_MANAGE": {
+        "kind": "odata",
+        "model": "srv/external/UI_SOURCINGPROJECT_MANAGE",
+        "csrf": true,
+        "csrfInBatch": true,
+        "[hybrid]": {
+          "credentials": {
+            "url": "https://qpe.itesys.ch/sap/opu/odata/sap/UI_SOURCINGPROJECT_MANAGE/",
+            "authentication": "BasicAuthentication",
+            "queries": {
+              "sap-client": "500"
+            }
+          },
+          "csrf": {
+            "method": "HEAD",
+            "url": "https://qpe.itesys.ch/sap/opu/odata/sap/UI_SOURCINGPROJECT_MANAGE/"
+          }
+        }
       }
     }
-  }
+  },
+  "sapux": [
+    "app/qp-ui5-material"
+  ]
 }
