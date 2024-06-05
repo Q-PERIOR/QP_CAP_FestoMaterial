@@ -10,14 +10,30 @@ service MaterialService {
     };
     entity Material as projection on S4Sourcing.CntrlSrcgProjMaterialVH {
         key Material,
+        key Plant,
         MaterialName,
         MaterialType,
-        MaterialTypeName
+        MaterialTypeName,
+        MaterialGroup,
+        MaterialGroupName,
+        MaterialBaseUnit,
+        OpnCtlgWebServiceID,
+        ProcurementHubSourceSystem
     };
     entity SourcingProject as projection on S4Sourcing.SourcingProject {
-        key SourceSourcingProjectUUID,
+        key SourcingProjectUUID,
         key IsActiveEntity,
         SourcingProject,
-        SourcingProjectType
+        SourcingProjectType,
+        to_SourcingProjectItem
+    };
+
+    entity SourcingProjectItem as projection on S4Sourcing.SourcingProjectItem {
+        key SourcingProjectItemUUID,
+        key IsActiveEntity,
+        SourcingProjectUUID,
+        SourcingProjectItemType,
+        SrcgProjItemClassification,
+        Material
     }
 }

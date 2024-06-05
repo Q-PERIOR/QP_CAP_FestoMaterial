@@ -17,7 +17,7 @@ sap.ui.define([
                 let oItem = {
                     SourcingProjectItemType: "N",
                     SrcgProjItemClassification: "C",
-                    Material: aSelectedContext[i].getProperty("Product")
+                    Material: aSelectedContext[i].getProperty("Material")
                 }
                 aItems.push(oItem)
             }
@@ -38,9 +38,6 @@ sap.ui.define([
                 // creation canceled (if the request failed, it will be
                 // automatically queued again)
             });
-            debugger;
-
-            debugger;
         }
     };
 });

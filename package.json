@@ -64,7 +64,7 @@
         }
       },
       "UI_SOURCINGPROJECT_MANAGE": {
-        "kind": "odata",
+        "kind": "odata-v2",
         "model": "srv/external/UI_SOURCINGPROJECT_MANAGE",
         "csrf": true,
         "csrfInBatch": true,

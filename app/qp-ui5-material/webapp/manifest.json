@@ -88,28 +88,28 @@
       "routes": [
         {
           "pattern": ":?query:",
-          "name": "ProductList",
-          "target": "ProductList"
+          "name": "MaterialList",
+          "target": "MaterialList"
         },
         {
-          "pattern": "Product({key}):?query:",
-          "name": "ProductObjectPage",
-          "target": "ProductObjectPage"
+          "pattern": "MaterialObjectPage({key}):?query:",
+          "name": "MaterialObjectPage",
+          "target": "MaterialObjectPage"
         }
       ],
       "targets": {
-        "ProductList": {
+        "MaterialList": {
           "type": "Component",
-          "id": "ProductList",
+          "id": "MaterialList",
           "name": "sap.fe.templates.ListReport",
           "options": {
             "settings": {
-              "entitySet": "Product",
+              "entitySet": "Material",
               "variantManagement": "Page",
               "navigation": {
                 "Product": {
                   "detail": {
-                    "route": "ProductObjectPage"
+                    "route": "MaterialObjectPage"
                   }
                 }
               },
@@ -129,14 +129,14 @@
             }
           }
         },
-        "ProductObjectPage": {
+        "MaterialObjectPage": {
           "type": "Component",
-          "id": "ProductObjectPage",
+          "id": "MaterialObjectPage",
           "name": "sap.fe.templates.ObjectPage",
           "options": {
             "settings": {
               "editableHeaderContent": false,
-              "entitySet": "Product"
+              "entitySet": "Material"
             }
           }
         }
